@@ -8,7 +8,7 @@ function Home() {
 
     return (
         <>
-            <h1>Banco do Senai</h1>
+            <h1 className="text-3xl font-bold underline">Banco do Senai</h1>
             <h2>Bem vindo, {usuario.nome}</h2>
             <h4>Sua conta está: {usuario.statusConta}</h4>
             <CardCartao />

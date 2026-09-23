@@ -12,7 +12,7 @@ const usuarioInicial = {
     nome: 'ABC',
     clienteDesde: '2019-03-15',
     foto: null,
-    statusConta: 'bloqueada', // ativa, bloqueada, encerrada
+    statusConta: 'ativo', // ativa, bloqueada, encerrada
     email: 'abc@banco.com',
     cpf: '123.456.789-00',
     chavesPixCadastradas: [

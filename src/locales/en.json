@@ -1,0 +1,13 @@
+{    
+  "login": {
+    "inputEmail": "Type your mail",
+    "inputSenha": "Type your password",
+    "btn_entrar": "Sign In"
+  },
+  "home": {
+    "welcome": "Welcome"
+  },
+  "erros": {
+    "conta_bloqueada": "Your account is blocked, the content cannot be viewed."
+  }
+}

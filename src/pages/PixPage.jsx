@@ -1,7 +1,7 @@
 import { useUser } from "../context/UserContext"
-
+import { useTranslation } from 'react-i18next'
 function PixPage() {
-
+    const { t } = useTranslation()
     const { usuario } = useUser()
 
     return (
@@ -9,7 +9,7 @@ function PixPage() {
             <h1>Área Pix</h1>
 
             {usuario.statusConta === 'bloqueada' ?
-                <span>Sua conta está bloqueada, não é possível visualizar as chaves.</span>
+                <span>{t('erros.conta_bloqueada')}</span>
                 : <>
                     {usuario.chavesPixCadastradas.map(item =>
                         <span>{item.tipo} - {item.valor}</span>

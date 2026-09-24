@@ -1,0 +1,13 @@
+{    
+  "login": {
+    "inputEmail": "Insira seu e-mail",
+    "inputSenha": "Insira sua senha",
+    "btn_entrar": "Entrar"
+  },
+  "home": {
+    "welcome": "Bem vindo"
+  },
+  "erros": {
+    "conta_bloqueada": "Sua conta está bloqueada, não é possível visualizar o conteúdo."
+  }
+}

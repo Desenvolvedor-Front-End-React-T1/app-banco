@@ -1,4 +1,5 @@
 # React + Vite (Alteração para a aula 28/09/2026)
+# React + Vite (MODIFICADO)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

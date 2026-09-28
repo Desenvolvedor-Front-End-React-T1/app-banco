@@ -38,3 +38,51 @@ USUARIO ABC está com a conta bloquada. -> ContextAPI
         - /home
         - /meus-cartoes
         - /meus-investimentos
+
+
+
+
+ATOMIC DESIGN
+Button              → Atom
+-SearchInput
+ ├ Input
+ └ Button            → Molecule
+Header
+ ├ Logo
+ ├ SearchInput
+ └ UserMenu          → Organism
+HomeTemplate         → Template
+HomePage             → Page
+
+Feature Based Arch
+/src
+    /features
+        /auth
+            /pages            
+                Login.jsx
+                Cadastro.jsx
+            /hooks
+                useLogin.js
+            /services
+                authService.js
+        /cart        
+            /pages
+                Carrinho.jsx            
+            /hooks
+            /services
+        /pay 
+            /pages
+                PagamentoPage.jsx
+                Sucesso.jsx
+                Falha.jsx
+            /hooks
+                usePagamento.js
+
+Component-Page Arch
+/src
+    /components
+        /CartComponents
+        /PagamentoComponents
+    /Pages
+        /Cart
+        /Pagamento

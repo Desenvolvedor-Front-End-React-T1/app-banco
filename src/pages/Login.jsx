@@ -13,7 +13,7 @@ function Login() {
         {/* COLUNA A */}
         {/* Background no css: background: nome_cor 
             Definir background no tailwind: bg-NOMECOR-INTENSIDADE */}
-        <div className='w-1/2 bg-blue-700 text-white p-16'>
+        <div className='w-1/2 bg-blue-700 text-white p-16 lg:flex lg:flex-col lg:justify-between'>
         {/* font-size: 32px; -> text-3xl */}
             <h1 className='text-3xl font-bold'>ReactBank</h1>
             <div>
@@ -27,7 +27,7 @@ function Login() {
 
                 <p className='mt-6 max-w-md text-blue-100'>Controle sua conta, seus cartões e investimentos em um só lugar.</p>
             </div>
-            
+            <p>Projeto Educacional - SCTEC</p>
         </div>
 
         {/* COLUNA B */}

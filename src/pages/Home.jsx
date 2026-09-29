@@ -10,7 +10,7 @@ function Home() {
 
     return (
         <>
-            <h1 className="text-3xl font-bold underline">Banco do Senai</h1>
+            <h1 className="text-3xl font-bold underline">Banco do Senai (21:22)</h1>
             <Button variant="outlined" color="warning">Tentar Novamente</Button>
             <Alert severity="warning">
                 Pagamento não aprovado.

@@ -5,6 +5,7 @@ import Financiamento from './pages/Financiamento'
 
 import PixPage from './pages/PixPage'
 import PrivateRoute from './routes/PrivateRoute'
+import Jogo from './pages/Jogo'
 
 function App() {
   /**
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         {/* Rotas Públicas: onde o usuario NÃO LOGADO pode acessar */}
         <Route path="/login" element={<Login />} />
+        <Route path="/jogo" element={<Jogo />} />
         {/* <Route path="/cadastro" element={<Cadastro />} /> */}
 
         {/* Rota privada */}

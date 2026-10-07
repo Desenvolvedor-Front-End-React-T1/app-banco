@@ -86,3 +86,21 @@ Component-Page Arch
     /Pages
         /Cart
         /Pagamento
+
+
+i18n -> extra
+build deploy
+tdd
+organizacao de projeto / scrum
+tailwind + MUI
+Conceito SOLID + testes avancados no react + CI/CD
+
+recapitulei context api, protecao de rotas
+
+vídeos extras:
+
+Typescript *
+Electron
+React Native *
+
+API + Banco de Dados

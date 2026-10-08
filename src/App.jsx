@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Financiamento from './pages/Financiamento'
+import Investimentos from './pages/Investimentos'
 
 import PixPage from './pages/PixPage'
 import PrivateRoute from './routes/PrivateRoute'
@@ -30,6 +31,7 @@ function App() {
         <Route element={<PrivateRoute />} >
 
           <Route path="/" element={<Home />} />
+          <Route path="/investimentos" element={<Investimentos />} />
           <Route path="/financiamento" element={<Financiamento />} />
           <Route path="/area-pix" element={<PixPage />} />
 

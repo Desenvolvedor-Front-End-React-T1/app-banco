@@ -1,9 +1,12 @@
 import { useUser } from '../context/UserContext'
 import { useTranslation } from 'react-i18next'
+import { useConta } from '../hooks/useConta'
 
 function Home() {
 
     const { t } = useTranslation()
+
+    const { sacar, saldo } = useConta()
 
     const { atualizarEmail, usuario } = useUser()
 
@@ -12,6 +15,10 @@ function Home() {
             {/* <h2>Bem vindo, {usuario.nome}</h2> */}
 
             <h2>{t('home.welcome')}</h2>
+
+            <span>Valor em Conta: {saldo}</span>
+
+            <button onClick={() => sacar(10)}>Sacar 10 reais</button>
 
             <input placeholder={t('login.inputEmail')} />
 

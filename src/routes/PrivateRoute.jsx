@@ -6,9 +6,9 @@ function PrivateRoute() {
     const { user } = useAuth()
 
     // redireciona para login caso o usuario não esteja logado
-    if (!user) {
-        return <Navigate to="/login"/> 
-    }
+    // if (!user) {
+    //     return <Navigate to="/login"/> 
+    // }
 
     return <Outlet />
 }

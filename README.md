@@ -86,3 +86,150 @@ Component-Page Arch
     /Pages
         /Cart
         /Pagamento
+
+
+i18n -> extra
+build deploy
+tdd
+organizacao de projeto / scrum
+tailwind + MUI
+Conceito SOLID + testes avancados no react + CI/CD
+
+recapitulei context api, protecao de rotas
+
+vídeos extras:
+
+Typescript *
+Electron
+React Native *
+
+API + Banco de Dados
+
+
+function BotaoAdicionar({ onAdicionar }) {
+    return (
+        <button onClick={onAdicionar}>Adicionar</button>
+    )
+}
+
+function SearchBox({ onPesquisa }) {
+    return (
+        <input type="text" onChange={e => {onPesquisa(e.target.value)}} />
+    )    
+}
+
+function App() {
+
+    function adicionarProduto() {
+        console.log('Produto adicionado')
+    }
+
+    function atualizarProdutos(produtoPesquisado) {
+        console.log('usuario está pesquisando um produto')
+    }
+
+    return (
+        <div>
+            <SearchBox onPesquisa={atualizarProdutos}/>
+            <h1>Produto X</h1>
+             <BotaoAdicionar onAdicionar={adicionarProduto} />
+        </div>
+    )
+}
+
+
+código duplicado
+
+// Código 1
+const precoFinal = preco - preco * desconto / 100
+
+// Código 2
+const total = item.preco - item.preco * item.desconto / 100
+
+
+IDEAL:
+
+function calcularPrecoComDesconto(preco, desconto) {
+    if (desconto < 0) {
+        // console.error('Não é possível aplicar desconto negativo')
+        return preco
+    }
+    const precoFinal = preco - preco * desconto / 100
+    return precoFinal
+}
+
+
+
+No react
+
+{isLoading && <p>Carregando aplicação</p>}
+{listaFiltrada.length === 0 && return <span>Não tem itens para serem exibidos</span>}
+
+
+
+
+1 Leio a tarefa da sprint
+2 Abro uma branch
+3 Executo a tarefa / codifico
+4 Executar testes . Ex: vitest soma.test.js ou o github executa automaticamente
+5 Fazer commits
+6 Realizar PR / Merge Requests
+7 De deixar a develop atualizada
+8 Deploy da aplicação (main)
+
+CI/CD
+
+
+
+Construir uma funcao de saque para o cliente
+- permitir o saque do dinheiro
+- sob quais condições (if):
+    1 - o cliente tem que ter o dinheiro ou limite disponivel
+    2 - ele não pode sacar valor negativo (porque nao pode fazer isso?)
+    3 - ele tem que estar com a conta ativa
+
+
+TDD - Test drive development
+Ao inves de construir a 'function', construimos inicialmente o teste
+que valida a função.
+Primeiro teste tem que falhar
+
+
+
+-30
+valor = dinheiros - saque
+
+módulo na matematica -> é a distancia que um número tem em relação ao zero
+
+-8 -> 8
+8 -> 8
+
+\/
+
+valor = dinheiros - |saque|
+
+if (saque < 0) {
+    return erro
+}
+
+
+
+1 - Pagina que vai renderizar (/pages/Investimentos.jsx)
+2 - Componente que renderiza cada objeto (/components/CardInvestimento.jsx)
+
+Hook personalizado para controlar estado da requisição (/hooks/useInvestimentos.js)
+
+Função generica que faz as requisições (/services/api.js)
+
+src
+ /components
+    - CardInvestimento.jsx -> card que renderiza 1 investimento
+ /pages
+    - Investimentos.jsx -> pagina que carrega todos os investimentos
+ /hooks
+    - useInvestimentos.js -> estados de loading, erro e dados
+ /services
+    - api.js -> função generica
+    - investimentosService.js -> funcoes que chamam /investimentos
+ /utils
+    - formatarMoeda.js -> função para formatar qualquer dado referente a dinheiro

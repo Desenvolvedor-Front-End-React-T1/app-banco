@@ -2,7 +2,7 @@ import CardInvestimento from '../components/CardInvestimento'
 import { useInvestimentos } from '../hooks/useInvestimentos'
 
 function Investimentos() {
-    const { investimentos } = useInvestimentos()
+    const { investimentos, loading, error } = useInvestimentos()
 
     return (
         <div className="p-6">
@@ -14,6 +14,9 @@ function Investimentos() {
                     <CardInvestimento key={investimento.id} investimento={investimento} />
                 ))}
             </div>
+
+            {loading && <span>Carregando investimentos</span>}
+            {error && <span className="text-red-500">{error}</span>}
         </div>
     )
 }

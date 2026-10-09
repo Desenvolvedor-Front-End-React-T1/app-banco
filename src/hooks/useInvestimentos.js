@@ -11,6 +11,10 @@ export function useInvestimentos() {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
 
+    function esperar() {
+        return new Promise((resolve) => setTimeout(resolve, 5000))
+    }
+
   // array de dependencias vazio
     // Faz com que seja executado apenas 1 vez, quando o componente for montado
     useEffect(() => {
@@ -19,16 +23,22 @@ export function useInvestimentos() {
         // eu jogo o dado para dentro de uma variável
         // verifico que o dado é valido 
         // salvo este dado em um useState para que seja renderizado na tela
+        async function fetchInvestimentos() {
+                
+            setLoading(true)
 
-        setLoading(true)
+            await esperar()
 
-        listarInvestimentos().then((dados) => { setInvestimentos(dados)  })
-        .catch(error => setError(error.message))
-        .finally(() => setLoading(false))
+            listarInvestimentos().then((dados) => { setInvestimentos(dados)  })
+            .catch(error => setError(error.message))
+            .finally(() => setLoading(false))
+        }
+
+        fetchInvestimentos()
     }, [])
 
 
     return { investimentos, loading, error }
 }
 // Como usar:
-// const { investimentos } = useInvestimentos() // hook personalizado
+// const { investimentos, loading } = useInvestimentos() // hook personalizado

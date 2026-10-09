@@ -211,3 +211,25 @@ valor = dinheiros - |saque|
 if (saque < 0) {
     return erro
 }
+
+
+
+1 - Pagina que vai renderizar (/pages/Investimentos.jsx)
+2 - Componente que renderiza cada objeto (/components/CardInvestimento.jsx)
+
+Hook personalizado para controlar estado da requisição (/hooks/useInvestimentos.js)
+
+Função generica que faz as requisições (/services/api.js)
+
+src
+ /components
+    - CardInvestimento.jsx -> card que renderiza 1 investimento
+ /pages
+    - Investimentos.jsx -> pagina que carrega todos os investimentos
+ /hooks
+    - useInvestimentos.js -> estados de loading, erro e dados
+ /services
+    - api.js -> função generica
+    - investimentosService.js -> funcoes que chamam /investimentos
+ /utils
+    - formatarMoeda.js -> função para formatar qualquer dado referente a dinheiro
